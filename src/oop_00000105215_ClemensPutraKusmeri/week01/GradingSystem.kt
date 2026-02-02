@@ -1,5 +1,7 @@
 package oop_00000105215_ClemensPutraKusmeri.week01
 
+fun calculateStatus(score:Int) = if(score>75) "Lulus" else "Tidak Lulus"
+
 fun main(){
   val name: String = "Clemens Putra Kusmeri"
   val score: Int = 90
@@ -14,5 +16,5 @@ fun main(){
   }
 
   println("Grade kamu: $grade")
+  println("Status: ${calculateStatus(score)}")
 }
-
