@@ -17,4 +17,10 @@ fun main(){
 
   println("Grade kamu: $grade")
   println("Status: ${calculateStatus(score)}")
+  
+  // Type Safety
+  val studentId: String? = null
+  val idLength = studentId?.length ?: 0
+
+  println("Panjang ID: $idLength")
 }
