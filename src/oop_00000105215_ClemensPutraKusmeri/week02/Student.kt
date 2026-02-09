@@ -12,5 +12,7 @@ class Student (
     } else {
       println("LOG: Objek Student $name berhasil dialokasikan di Memory.")
     }
+  } constructor(name: String, nim: String): this(name, nim, "Non-Marticulated"){
+    println("LOG: Menggunakan constructor jalur umum (Tanpa jurusan).")
   }
 }
