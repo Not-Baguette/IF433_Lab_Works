@@ -26,3 +26,13 @@ class Player(val username: String){
     recheckLvl()
   }
 }
+
+
+fun main(){
+  val test: Player = Player("jesselyn")
+  test.debugGetter()
+  test.addXp(50)
+  test.debugGetter()
+  test.addXp(60)
+  test.debugGetter()
+}
