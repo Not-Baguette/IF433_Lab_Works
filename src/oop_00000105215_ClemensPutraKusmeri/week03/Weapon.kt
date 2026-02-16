@@ -35,3 +35,10 @@ class Weapon(val name: String){
   }
 }
 
+fun main(){
+  val test: Weapon = Weapon("Naomi")
+  test.damage = -50
+  test.damage = 9999
+  test.damage = 600
+  test.debugGetter()
+}
