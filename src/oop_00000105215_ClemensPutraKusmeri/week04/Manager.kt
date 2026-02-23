@@ -9,10 +9,3 @@ class Manager(name: String, baseSalary: Int): Employee(name, baseSalary){
     return (super.calculateBonus() + 500000)
   }
 }
-
-fun main(){
-  println("--- Testing Manager ---")
-  val yourManager = Manager("Gavriel Donovan", 69420000)
-  yourManager.work()
-  println("Bonus: ${yourManager.calculateBonus()}")
-}

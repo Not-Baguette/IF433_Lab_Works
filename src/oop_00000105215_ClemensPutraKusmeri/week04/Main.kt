@@ -19,4 +19,14 @@ fun main(){
   myActualCar.accelerate()
   myActualCar.accelerate()
   myActualCar.accelerate()
+
+  println("--- Testing Manager ---")
+  val yourManager = Manager("Gavriel Donovan", 69420000)
+  yourManager.work()
+  println("Bonus: ${yourManager.calculateBonus()}")
+
+  println("--- Testing Developer ---")
+  val underworkedEmp = Developer("PASCAL", "Kiara Allysia Puteri Juntoro", 69420000)
+  underworkedEmp.work()
+  println("Bonus: ${underworkedEmp.calculateBonus()}")
 }
