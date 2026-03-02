@@ -4,7 +4,7 @@ fun main(){
   val dosen1 = Dosen(nama="Pak Alex", nidn="0123456")
   val admin1 = Admin(nama="Bu Siti")
 
-  val daftarPegawai: List<Pegawai> = listof(dosen1, admin1)
+  val daftarPegawai: List<Pegawai> = listOf(dosen1, admin1)
 
   println("=== Aktifitas Pegawai ===")
   for(pegawai in daftarPegawai){
