@@ -1,6 +1,23 @@
 package oop_00000105215_ClemensPutraKusmeri.week05
 
 fun main(){
+  println("=== Test MathHelper - Function Overloading ===")
+  
+  val mathHelper = MathHelper()
+  
+  // Test hitungLuas untuk persegi
+  val luasPersegi = mathHelper.hitungLuas(5)
+  println("Luas persegi dengan sisi 5: $luasPersegi")
+  
+  // Test hitungLuas untuk persegi panjang
+  val luasPersegiPanjang = mathHelper.hitungLuas(4, 6)
+  println("Luas persegi panjang dengan panjang 4 dan lebar 6: $luasPersegiPanjang")
+  
+  // Test hitungLuas untuk lingkaran
+  val luasLingkaran = mathHelper.hitungLuas(7.0)
+  println("Luas lingkaran dengan jari-jari 7.0: $luasLingkaran")
+  
+  println("\n=== Aktifitas Pegawai ===")
   val dosen1 = Dosen(nama="Pak Alex", nidn="0123456")
   val admin1 = Admin(nama="Bu Siti")
 
