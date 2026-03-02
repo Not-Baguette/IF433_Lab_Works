@@ -19,4 +19,15 @@ fun main(){
       }
     }
   }
+
+  println("\n=== Simulasi Pembayaran ===")
+  val eWallet = EWallet("Budi Santoso", 50000.0)
+  val creditCard = CreditCard("Budi Santoso", 100000.0)
+
+  val payments: List<PaymentMethod> = listOf(eWallet, creditCard)
+
+  for(payment in payments){
+    println("\n[Mencoba pembayaran Rp75000.0]")
+    payment.processPayment(75000.0)
+  }
 }
