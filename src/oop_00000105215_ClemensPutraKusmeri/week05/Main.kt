@@ -29,5 +29,13 @@ fun main(){
   for(payment in payments){
     println("\n[Mencoba pembayaran Rp75000.0]")
     payment.processPayment(75000.0)
+    
+    // Smart Casting: Cek apakah payment adalah EWallet
+    if(payment is EWallet){
+      println("\n=> Terdeteksi sebagai EWallet. Melakukan top up...")
+      payment.topUp(50000.0)
+      println("\n[Mencoba pembayaran Rp75000.0 lagi setelah top up]")
+      payment.processPayment(75000.0)
+    }
   }
 }
