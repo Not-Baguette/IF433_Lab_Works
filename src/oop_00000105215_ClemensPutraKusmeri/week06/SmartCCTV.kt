@@ -1,6 +1,6 @@
 package oop_00000105215_ClemensPutraKusmeri.week06
 
-class smartCCTV(override val id: String, override val name: String): SmartDevice, Switchable, Recordable{
+class SmartCCTV(override val id: String, override val name: String): SmartDevice, Switchable, Recordable{
   override fun turnOn(){
     println("$name turns on and starts shooting at thiefs")
     super.startRecord()
