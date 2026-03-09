@@ -11,7 +11,7 @@ interface Switchable{
 }
 
 interface Recordable{
-  abstract fun startRecord()
+  fun startRecord(){ println("Perekaman dimulai")}
   fun stopRecord(){ println("Perekaman dihentikan dan disimpan ke Cloud.") }
 }
 
