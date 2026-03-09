@@ -14,6 +14,16 @@ class SmartHomeHub{
       }
     }
   }
+
+  fun activateSecurityMode(){
+    for (i in devices){
+      if (i is Recordable){
+        i.startRecord()
+      } else if (i is SmartSpeaker){
+        i.playMusic("Sirine Peringatan")
+      }
+    }
+  }
 }
 
 /*
@@ -28,5 +38,6 @@ fun main(){
   test.addDevice(amogus2)
 
   test.turnOffAllSwitches()
+  test.activateSecurityMode()
 }
 */
