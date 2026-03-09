@@ -1,3 +1,5 @@
+package oop_00000105215_ClemensPutraKusmeri.week06
+
 interface Camera{
   fun turnOn() { println("Lensa kamera terbuka dan sensor aktif.") }
 }

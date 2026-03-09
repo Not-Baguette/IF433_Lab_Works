@@ -1,3 +1,5 @@
+package oop_00000105215_ClemensPutraKusmeri.week06
+
 class smartwatch: Camera, Phone {
   // resolve
   override fun turnOn(){
