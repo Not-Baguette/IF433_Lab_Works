@@ -1,0 +1,3 @@
+class smartwatch: Camera, Phone {
+  
+}
