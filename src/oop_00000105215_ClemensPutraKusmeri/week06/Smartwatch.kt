@@ -1,6 +1,6 @@
 package oop_00000105215_ClemensPutraKusmeri.week06
 
-class smartwatch : Watch(), BluetoothConnectable, Rechargeable {
+class Smartwatch : Watch(), BluetoothConnectable, Rechargeable {
   override fun showTime(){
     println("Layar OLED menyala: 14:00 WIB")
   }
