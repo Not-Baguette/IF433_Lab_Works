@@ -18,4 +18,9 @@ fun main(){
   println("\n=== TESTING CHECKOUT ===")
   processCheckout(pay1, 50000.0)
   processCheckout(pay2, 150000.0)
+
+  println("=== SMART HOME ===")
+  val cctv = SmartCCTV("0", "Ezviz Dapur")
+  val speaker = SmartSpeaker("1", "Google Nest Dapur")
+  val lamp = SmartLamp("2", "Ruang Tamu")
 }
