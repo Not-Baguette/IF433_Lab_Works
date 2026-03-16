@@ -41,4 +41,13 @@ fun main(){
   println("Drop Chance: ${ItemRarity.LEGENDARY.dropChance}%")
   val StartSword = Weapon.forgeStarterSword()
   println(" Weapon: ${StartSword.item.name} \n Damage: ${StartSword.item.damage} \n Rarity: ${StartSword.item.rarity} \n Durability: ${StartSword.durability}")
+  
+  println("Hmmm, I need to upgrade my weapon...")
+  val newSword = StartSword.item.copy(damage = 25)
+  println("\nWelcome to the blacksmith! What can I do for you? \nNew Weapon: ${newSword.name} | Damage: ${newSword.damage} | Rarity: ${newSword.rarity}")
+
+  processEvent(BattleState.SafeZone)
+  processEvent(BattleState.MonsterEncounter("Goblin Nakal"))
+  processEvent(BattleState.LootDropped(newSword))
+  processEvent(BattleState.GameOver("Terkena jebakan racun"))
 }
