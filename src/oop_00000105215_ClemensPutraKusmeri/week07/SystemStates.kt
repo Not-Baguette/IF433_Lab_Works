@@ -1,7 +1,7 @@
 package oop_00000105215_ClemensPutraKusmeri.week07
 
 enum state AppState{
-  STARTING, RUNNING, STOPPEDS
+  STARTING, RUNNING, STOPPED
 }
 
 sealed class ApiResponse {
