@@ -1,3 +1,5 @@
+package oop_00000105215_ClemensPutraKusmeri.week07
+
 sealed class BattleState {
     data class MonsterEncounter(val monsterName: String) : BattleState()
     data class LootDropped(val item: GameItem) : BattleState()
