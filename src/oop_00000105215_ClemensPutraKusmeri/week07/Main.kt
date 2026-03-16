@@ -35,4 +35,6 @@ fun main(){
     is ApiResponse.Error -> "Munculkan alert: ${response.message}"
     ApiResponse.Loading -> "Tampilkan Spinner"
   }
+  GameManager.startGame() 
+  GameManager.startGame() 
 }

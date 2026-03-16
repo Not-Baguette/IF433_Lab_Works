@@ -1,3 +1,5 @@
+package oop_00000105215_ClemensPutraKusmeri.week07
+
 class Weapon private constructor(val item: GameItem, val durability: Int){
   companion object{
     fun forgeStarterSword(): Weapon{
