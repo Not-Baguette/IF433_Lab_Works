@@ -65,6 +65,12 @@ fun demonstrateMixedCollectionCasting() {
   }
 }
 
+fun demonstrateSafeCastFallback() {
+  val rawValue: Any? = 100
+  val parsedString = rawValue as? String ?: "Fallback string"
+  println("Hasil fallback: $parsedString")
+}
+
 fun main() {
   println("=== Nullable Types & Smart Casting ===")
   demonstrateNullableProfile()
@@ -77,4 +83,7 @@ fun main() {
 
   println("\n=== Safe Casting as? ===")
   demonstrateMixedCollectionCasting()
+
+  println("\n=== Elvis Fallback ===")
+  demonstrateSafeCastFallback()
 }
