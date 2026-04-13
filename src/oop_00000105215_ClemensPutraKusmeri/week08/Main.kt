@@ -56,6 +56,9 @@ fun demonstrateMixedCollectionCasting() {
     "Week 8"
   )
 
+  val onlyStrings = mixedData.mapNotNull { it as? String }
+  println("Filtered strings: ${onlyStrings.joinToString(", ")}")
+
   for (item in mixedData) {
     val text = item as? String ?: "[bukan string]"
     println(text)
