@@ -1,0 +1,37 @@
+package oop_00000105215_ClemensPutraKusmeri.week08
+
+fun demonstrateNullableProfile() {
+  val profile = UserProfile(
+    id = "USR-08-01",
+    displayName = "Alya",
+    email = null,
+    phoneNumber = "08123456789"
+  )
+
+  NotificationService.sendWelcomeMessage(profile)
+}
+
+fun demonstrateNestedSafeCalls() {
+  val order = Order(
+    orderId = "ORD-08-001",
+    customer = Customer(
+      name = "Clemens",
+      address = Address(
+        street = "Jl. Melati 12",
+        city = "Jakarta",
+        postalCode = "12345"
+      )
+    )
+  )
+
+  val city = order.customer?.address?.city ?: "Kota tidak ditemukan"
+  println("Kota pengiriman: $city")
+}
+
+fun main() {
+  println("=== Nullable Types & Smart Casting ===")
+  demonstrateNullableProfile()
+
+  println("\n=== Nested Safe Calls ===")
+  demonstrateNestedSafeCalls()
+}
