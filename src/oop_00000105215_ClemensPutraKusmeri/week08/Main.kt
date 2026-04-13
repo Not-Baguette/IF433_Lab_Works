@@ -28,10 +28,31 @@ fun demonstrateNestedSafeCalls() {
   println("Kota pengiriman: $city")
 }
 
+fun demonstrateSafeCallLet() {
+  val order = Order(
+    orderId = "ORD-08-002",
+    customer = Customer(
+      name = "Nadia",
+      address = Address(
+        street = "Jl. Kenanga 7",
+        city = "Bandung",
+        postalCode = null
+      )
+    )
+  )
+
+  order.customer?.address?.city?.let { city ->
+    println("Alamat valid ditemukan di $city")
+  }
+}
+
 fun main() {
   println("=== Nullable Types & Smart Casting ===")
   demonstrateNullableProfile()
 
   println("\n=== Nested Safe Calls ===")
   demonstrateNestedSafeCalls()
+
+  println("\n=== Safe Call with let ===")
+  demonstrateSafeCallLet()
 }
