@@ -109,4 +109,7 @@ fun main() {
 
   println("\n=== Java Interop with !! ===")
   demonstrateLegacyInterop()
+
+  println("\n=== Simulated Unit Test Failure ===")
+  runMockUnitTest()
 }
