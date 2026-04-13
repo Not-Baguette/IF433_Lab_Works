@@ -71,9 +71,13 @@ fun demonstrateSafeCastFallback() {
   println("Hasil fallback: $parsedString")
 }
 
-fun demonstrateRedButtonTrial() {
-  val fragileValue: String? = null
-  println(fragileValue!!.length)
+fun demonstrateRequireNotNullAlternative() {
+  val maybeToken: String? = "VALID-TOKEN"
+  val token = requireNotNull(maybeToken) {
+    "Token harus tersedia"
+  }
+
+  println("Token aman: $token")
 }
 
 fun main() {
@@ -95,5 +99,6 @@ fun main() {
   println("\n=== Safe Casting Demo Complete ===")
 
   println("\n=== Red Button Trial ===")
-  demonstrateRedButtonTrial()
+  println("\n=== requireNotNull Alternative ===")
+  demonstrateRequireNotNullAlternative()
 }
