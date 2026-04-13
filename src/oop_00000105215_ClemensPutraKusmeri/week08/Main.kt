@@ -86,4 +86,6 @@ fun main() {
 
   println("\n=== Elvis Fallback ===")
   demonstrateSafeCastFallback()
+
+  println("\n=== Safe Casting Demo Complete ===")
 }
