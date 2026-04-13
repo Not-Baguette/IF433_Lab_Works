@@ -71,6 +71,11 @@ fun demonstrateSafeCastFallback() {
   println("Hasil fallback: $parsedString")
 }
 
+fun demonstrateRedButtonTrial() {
+  val fragileValue: String? = null
+  println(fragileValue!!.length)
+}
+
 fun main() {
   println("=== Nullable Types & Smart Casting ===")
   demonstrateNullableProfile()
@@ -88,4 +93,7 @@ fun main() {
   demonstrateSafeCastFallback()
 
   println("\n=== Safe Casting Demo Complete ===")
+
+  println("\n=== Red Button Trial ===")
+  demonstrateRedButtonTrial()
 }
