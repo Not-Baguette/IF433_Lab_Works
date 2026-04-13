@@ -46,6 +46,22 @@ fun demonstrateSafeCallLet() {
   }
 }
 
+fun demonstrateMixedCollectionCasting() {
+  val mixedData: List<Any?> = listOf(
+    "Kotlin",
+    42,
+    null,
+    "Advanced Null Safety",
+    3.14,
+    "Week 8"
+  )
+
+  for (item in mixedData) {
+    val text = item as? String ?: "[bukan string]"
+    println(text)
+  }
+}
+
 fun main() {
   println("=== Nullable Types & Smart Casting ===")
   demonstrateNullableProfile()
@@ -55,4 +71,7 @@ fun main() {
 
   println("\n=== Safe Call with let ===")
   demonstrateSafeCallLet()
+
+  println("\n=== Safe Casting as? ===")
+  demonstrateMixedCollectionCasting()
 }
