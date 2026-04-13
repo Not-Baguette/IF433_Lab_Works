@@ -80,6 +80,11 @@ fun demonstrateRequireNotNullAlternative() {
   println("Token aman: $token")
 }
 
+fun demonstrateLegacyInterop() {
+  val legacyMessage = LegacyJavaAPI.getLegacyMessage()!!
+  println(legacyMessage)
+}
+
 fun main() {
   println("=== Nullable Types & Smart Casting ===")
   demonstrateNullableProfile()
@@ -101,4 +106,7 @@ fun main() {
   println("\n=== Red Button Trial ===")
   println("\n=== requireNotNull Alternative ===")
   demonstrateRequireNotNullAlternative()
+
+  println("\n=== Java Interop with !! ===")
+  demonstrateLegacyInterop()
 }
