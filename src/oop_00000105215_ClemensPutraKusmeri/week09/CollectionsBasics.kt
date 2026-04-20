@@ -8,7 +8,7 @@ fun main(){
   println("Immutable List: $frameworks")
 
   // mutable list: Bisa ditambah/dikurangi
-  val scores: MutableList<Int> = MutableListOf(85, 90)
+  val scores: MutableList<Int> = mutableListOf(85, 90)
   scores.add(95)
   scores[0] = 88
   println("Mutable List: $scores")
@@ -26,7 +26,7 @@ fun main(){
   val studentGrades = mapOf(
     "Alice" to "A",
     "Bob" to "B",
-    "Charlie" tp "A" // value boleh duplikat, key tidak
+    "Charlie" to "A" // value boleh duplikat, key tidak
   )
   println("Nilai Bob: ${studentGrades["Bob"]}")
 

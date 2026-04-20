@@ -8,8 +8,8 @@ fun main(){
   println("Evens only: $evens")
 
   println("=== HOF: MAP ===")
-  val mutiplied = evens.map{it * 10}
+  val multiplied = evens.map{it * 10}
   val asStrings = multiplied.map{"Rp ${it}k"}
   println("Multiplied: $multiplied")
-  println("Formatted: $asString")
+  println("Formatted: $asStrings")
 }
