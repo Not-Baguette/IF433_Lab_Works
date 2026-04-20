@@ -7,9 +7,11 @@ fun main(){
     TradeLog("ETHUSDT", "SHORT", 3000, 500.0, "OPEN"),
     TradeLog("BTCUSDT", "SHORT", 4000, 100.0, "CLOSED"),
     TradeLog("BTCUSDT", "LONG", 5000, -500.0, "OPEN"),
-    TradeLog("BTCUSDT", "LONG", 2200, 1000.0, "CLOSED")
+    TradeLog("BTCUSDT", "LONG", 2200, -1000.0, "CLOSED")
   )
 
-  val closedTrades = tradeHistory.filter{it.status == "CLOSED"}
+  val closedTrades = tradeHistory
+      .filter{it.status == "CLOSED"}
+  val winningTrades = closedTrades.filter{it.roe > 0}
   println("$closedTrades")
 }
