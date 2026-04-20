@@ -34,4 +34,5 @@ fun main(){
       .toSet()
   println("\n=== Unique Trading Pairs ===")
   println("Pasangan yang pernah ditradingkan: $uniquePairs")
-}
+} 
+// aman
