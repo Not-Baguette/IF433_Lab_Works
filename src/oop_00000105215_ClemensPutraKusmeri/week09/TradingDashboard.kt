@@ -14,5 +14,12 @@ fun main(){
       .filter{it.status == "CLOSED"}
   val winningTrades = closedTrades.filter{it.roe > 0}
   val losingTrades = closedTrades.filter{it.roe <= 0}
-  println("$closedTrades")
+  println("$winningTrades")
+  println("$losingTrades")
+
+  val topPerformersString = winningTrades
+      .sortedByDescending {it.roe}
+      .map {"WIN [${it.pair} - ${it.position}]: +${it.roe}% ROE (Lev: ${it.leverage}x)"}
+  println("\n=== Top Performers ===")
+  topPerformersString.forEach { println(it) }
 }
