@@ -7,6 +7,6 @@ class WalletRepository<T: Any>{
         return items
     }
     fun findByName(name: String): T? {
-        return items.find {it.name.equals(name, ignoreCase = true)}
+        return items.find{it.name.equals(name, ignoreCase = true)}
     }
 }
