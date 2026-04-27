@@ -1,5 +1,5 @@
 package oop_00000105215_ClemensPutraKusmeri.week10
 
-data class Coin(val name: String, val balance: Double)
+data class Coin(override val name: String, val balance: Double) : HasName
 
-data class Transaction(val id: String, val amount: Double)
+data class Transaction(override val name: String, val amount: Double) : HasName

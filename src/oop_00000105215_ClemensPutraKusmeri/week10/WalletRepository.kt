@@ -1,4 +1,10 @@
-class WalletRepository<T: Any>{
+package oop_00000105215_ClemensPutraKusmeri.week10
+
+interface HasName {
+    val name: String
+}
+
+class WalletRepository<T: HasName>{
     private val items = mutableListOf<T>()
     fun add(item: T) {
         items.add(item)
