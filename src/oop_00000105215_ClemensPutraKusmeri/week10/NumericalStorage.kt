@@ -1,4 +1,4 @@
-package oop_00000105215_ClemensPutraKusmeri
+package oop_00000105215_ClemensPutraKusmeri.week10
 
 
 class MathBox<T: Number>(val value1: T, val value2: T){
