@@ -7,6 +7,10 @@ fun dispenseKibble(requestedGram: Int, availableGram: Int, isJammed: Boolean): I
         throw DispenserJamException()
     }
     
-    // Implementation will continue in next steps
-    return 0
+    if (requestedGram > availableGram) {
+        throw FoodEmptyException(requestedGram, availableGram)
+    }
+    
+    println("Kibble berhasil dikeluarkan!")
+    return availableGram - requestedGram
 }
