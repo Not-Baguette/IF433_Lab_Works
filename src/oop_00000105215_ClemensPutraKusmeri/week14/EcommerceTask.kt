@@ -23,10 +23,10 @@ class EmailNotificationService : NotificationService {
     }
 }
 
-class BadOrderProcessor {
-    // VIOLATION: Hardcoded File I/O (DIP), Melakukan kalkulasi + I/O + Notifikasi sekali
-    private val file = File("orders.csv")
-
+class EcommerceOrderProcessor(
+    private val storage: OrderStorage,
+    private val notification: NotificationService
+) {
     fun processOrder(itemName: String, basePrice: Double, customerType: String) {
 
         // VIOLATION: Kaku jika ada tipe customer/diskon baru di masa depan (OCP)
@@ -38,10 +38,8 @@ class BadOrderProcessor {
 
         println("Memproses pesanan $itemName seharga $finalPrice")
 
-        // VIOLATION SRP/DIP: Menulis file langsung di class bisnis
-        file.appendText("$itemName,$finalPrice,$customerType\n")
-
-        // VIOLATION SRP/DIP: Notifikasi terikat kuat dengan sistem order
-        println("Email terkirim: Pesanan $itemName Anda telah dikonfirmasi!")
+        // FIXED SRP/DIP: Menggunakan abstraction untuk storage dan notifikasi
+        storage.save(itemName, finalPrice, customerType)
+        notification.notify(itemName)
     }
 }
