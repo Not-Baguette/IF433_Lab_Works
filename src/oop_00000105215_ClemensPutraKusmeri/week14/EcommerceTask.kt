@@ -35,6 +35,10 @@ class VipDiscount : CustomerDiscountStrategy {
     override fun calculatePrice(basePrice: Double) = basePrice * 0.90
 }
 
+class SeniorDiscountEcommerce : CustomerDiscountStrategy {
+    override fun calculatePrice(basePrice: Double) = basePrice * 0.80
+}
+
 class EcommerceOrderProcessor(
     private val storage: OrderStorage,
     private val notification: NotificationService,
