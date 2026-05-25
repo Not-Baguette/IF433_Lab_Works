@@ -23,6 +23,18 @@ class EmailNotificationService : NotificationService {
     }
 }
 
+interface CustomerDiscountStrategy {
+    fun calculatePrice(basePrice: Double): Double
+}
+
+class RegularDiscount : CustomerDiscountStrategy {
+    override fun calculatePrice(basePrice: Double) = basePrice
+}
+
+class VipDiscount : CustomerDiscountStrategy {
+    override fun calculatePrice(basePrice: Double) = basePrice * 0.90
+}
+
 class EcommerceOrderProcessor(
     private val storage: OrderStorage,
     private val notification: NotificationService
