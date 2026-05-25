@@ -1,17 +1,17 @@
 package oop_00000105215_ClemensPutraKusmeri.week14
 
 interface DiscountStrategy {
-    fun applyDiscount(price: Double): Double
+    fun apply(price: Double): Double
 }
 
 class StudentDiscount : DiscountStrategy {
-    override fun applyDiscount(price: Double): Double {
-        return price * 0.80
-    }
+    override fun apply(price: Double) = price * 0.80
 }
 
 class MemberDiscount : DiscountStrategy {
-    override fun applyDiscount(price: Double): Double {
-        return price * 0.85
-    }
+    override fun apply(price: Double) = price * 0.85
+}
+
+class SafeDiscountCalculator(private val strategy: DiscountStrategy) {
+    fun calculate(price: Double) = strategy.apply(price)
 }
