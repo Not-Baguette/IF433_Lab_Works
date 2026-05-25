@@ -37,16 +37,13 @@ class VipDiscount : CustomerDiscountStrategy {
 
 class EcommerceOrderProcessor(
     private val storage: OrderStorage,
-    private val notification: NotificationService
+    private val notification: NotificationService,
+    private val discountStrategy: CustomerDiscountStrategy
 ) {
     fun processOrder(itemName: String, basePrice: Double, customerType: String) {
 
-        // VIOLATION: Kaku jika ada tipe customer/diskon baru di masa depan (OCP)
-        val finalPrice = when (customerType) {
-            "REGULAR" -> basePrice
-            "VIP" -> basePrice * 0.90 // Diskon 10%
-            else -> basePrice
-        }
+        // FIXED OCP: Menggunakan strategy untuk kalkulasi harga
+        val finalPrice = discountStrategy.calculatePrice(basePrice)
 
         println("Memproses pesanan $itemName seharga $finalPrice")
 
